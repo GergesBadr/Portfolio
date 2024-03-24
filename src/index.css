@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  input:focus,
+  button:focus,
+  textarea:focus,
+  a:focus {
+    @apply outline-2 outline-offset-4 outline-indigo-700;
+  }
+}
+
+@layer components {
+  .responsive-container {
+    @apply mx-4 sm:mx-10 md:mx-16 lg:mx-28 xl:mx-36 2xl:mx-48;
+  }
+
+  .sec-text {
+    @apply text-gray-500 dark:text-gray-400;
+  }
+  .unique-text {
+    @apply text-indigo-600 dark:text-indigo-400;
+  }
+
+  /* Headings */
+  .heading-1 {
+    @apply text-[clamp(2rem,5vw,2.5rem)] font-black;
+  }
+  .heading-2 {
+    @apply text-[clamp(1.5rem,4vw,2rem)] font-bold;
+  }
+  .heading-3 {
+    @apply text-[clamp(1rem,3vw,1.5rem)] font-semibold;
+  }
+
+  /* Post content */
+  .post-content a {
+    @apply border-b-2 border-b-indigo-500 font-medium;
+  }
+  .post-content h2 {
+    @apply mb-8 mt-20 w-fit border-b-4 border-b-indigo-600 pb-4;
+  }
+  .post-content h3 {
+    @apply mb-6 mt-14;
+  }
+  .post-content p {
+    @apply mb-4 leading-relaxed opacity-95;
+  }
+  .post-content ol,
+  .post-content ul {
+    @apply mb-10 list-inside space-y-2 sm:list-outside;
+  }
+
+  /* Project-details */
+  .project-details {
+    @apply [&_:not(h2,h3)]:sec-text space-y-4;
+  }
+  .project-details p {
+    @apply text-lg leading-relaxed;
+  }
+  .project-details a {
+    @apply unique-text border-b-2 border-b-indigo-500 font-medium;
+  }
+  .project-details ul,
+  .project-details ol {
+    @apply list-inside space-y-1;
+  }
+
+  /* Code */
+  .code {
+    @apply rounded-sm bg-[#737d8c2b] px-2 py-1 font-medium tracking-wide;
+  }
+}
