@@ -13,7 +13,7 @@ function ToggleTheme() {
   };
 
   return (
-    <AnimatePresence mode="popLayout">
+    <AnimatePresence mode="popLayout" initial={false}>
       <motion.button
         key={isLightMode ? "moon" : "sun"}
         aria-label={isLightMode ? "Apply dark mode" : "Apply light mode"}
