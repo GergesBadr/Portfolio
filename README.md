@@ -1,5 +1,5 @@
 # Personal Portfolio
-[Live site](www.gergesbadr.com)
+[Live site](https://gergesbadr.com)
 ![Capture](https://github.com/GergesBadr/Portfolio/assets/110337209/08bc272b-df18-4e32-a5de-4c5a9ac85eb8)
 
 Welcome to my personal portfolio, which features some of my projects, my resume and technical skills.
