@@ -34,7 +34,10 @@ function Post() {
         );
       document
         .querySelector("meta[property='og:image']")
-        .setAttribute("content", "/src/assets/open-graph/general.jpeg");
+        .setAttribute(
+          "content",
+          "https://media.licdn.com/dms/image/D4E16AQEmVSTYlCjtPA/profile-displaybackgroundimage-shrink_350_1400/0/1712592186545?e=1718236800&v=beta&t=d3E_iMvCwbOfjVeMbnD1vEYqzIPo7uxBQiL8bA7pG1E",
+        );
       document
         .querySelector("meta[property='og:type']")
         .setAttribute("content", "website");
