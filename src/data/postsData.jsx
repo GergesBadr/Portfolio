@@ -45,7 +45,8 @@ const postsData = [
     id: 1,
     title: "We need to talk about accessibility",
     urlTitle: "accessibility-introduction",
-    ogImage: "../assets/open-graph/accessibility.jpg",
+    ogImage:
+      "https://github.com/GergesBadr/Portfolio/blob/main/src/assets/open-graph/accessibility.jpg",
     date: new Date("2024-03-16"),
     category: "Accessibility",
     introduction:
@@ -306,7 +307,8 @@ const postsData = [
     id: 2,
     title: "Custom CSS selectors with Tailwind",
     urlTitle: "tailwind-arbitrary-variants",
-    ogImage: "../assets/open-graph/tailwind.jpg",
+    ogImage:
+      "https://github.com/GergesBadr/Portfolio/blob/main/src/assets/open-graph/tailwind.jpg",
     date: new Date("2024-03-23"),
     category: "Tailwind",
     introduction:
