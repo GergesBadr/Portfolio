@@ -45,7 +45,7 @@ const postsData = [
     id: 1,
     title: "We need to talk about accessibility",
     urlTitle: "accessibility-introduction",
-    ogImage: "https://unsplash.com/photos/black-and-white-brick-wall-ju1yFZkrxVg",
+    ogImage: "https://images.unsplash.com/photo-1600202751116-3e0226e1e7a0?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     date: new Date("2024-03-16"),
     category: "Accessibility",
     introduction:
@@ -306,7 +306,7 @@ const postsData = [
     id: 2,
     title: "Custom CSS selectors with Tailwind",
     urlTitle: "tailwind-arbitrary-variants",
-    ogImage: "https://images.app.goo.gl/iu2wSvwwh65t4jVQ8",
+    ogImage: "https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     date: new Date("2024-03-23"),
     category: "Tailwind",
     introduction:
