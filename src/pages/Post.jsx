@@ -34,7 +34,7 @@ function Post() {
         );
       document
         .querySelector("meta[property='og:image']")
-        .setAttribute("content", "https://github.com/GergesBadr/Portfolio/blob/main/src/assets/open-graph/general.jpeg");
+        .setAttribute("content", "/src/assets/open-graph/general.jpeg");
       document
         .querySelector("meta[property='og:type']")
         .setAttribute("content", "website");
