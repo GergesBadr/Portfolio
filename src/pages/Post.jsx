@@ -12,13 +12,19 @@ function Post() {
   const currentPost = postsData.find((post) => post.urlTitle === urlTitle);
   const readingTime = useCalcReadingTime(".post-content");
 
-  // Update meta description for each post page
+  // Update meta data for each post page
   useEffect(() => {
     document
       .querySelector("meta[name='description']")
       .setAttribute("content", currentPost.introduction);
+    document
+      .querySelector("meta[property='og:image']")
+      .setAttribute("content", currentPost.ogImage);
+    document
+      .querySelector("meta[property='og:type']")
+      .setAttribute("content", "article");
 
-    // Cleanup to default description
+    // Cleanup to default
     return () => {
       document
         .querySelector("meta[name='description']")
@@ -26,8 +32,14 @@ function Post() {
           "content",
           "Welcome to my portfolio, here you will find everything you need/want to know about me, who am I, what I do, what can I offer for you, what projects I have done, what are my thoughts about frontend development, and how to contact me.",
         );
+      document
+        .querySelector("meta[property='og:image']")
+        .setAttribute("content", "../assets/open-graph/general.jpeg");
+      document
+        .querySelector("meta[property='og:type']")
+        .setAttribute("content", "website");
     };
-  }, [currentPost.introduction]);
+  }, [currentPost.introduction, currentPost.ogImage]);
 
   return (
     <AnimatedPage>
