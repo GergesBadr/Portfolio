@@ -17,12 +17,6 @@ function Post() {
     document
       .querySelector("meta[name='description']")
       .setAttribute("content", currentPost.introduction);
-    document
-      .querySelector("meta[property='og:image']")
-      .setAttribute("content", currentPost.ogImage);
-    document
-      .querySelector("meta[property='og:type']")
-      .setAttribute("content", "article");
 
     // Cleanup to default
     return () => {
@@ -32,17 +26,8 @@ function Post() {
           "content",
           "Welcome to my portfolio, here you will find everything you need/want to know about me, who am I, what I do, what can I offer for you, what projects I have done, what are my thoughts about frontend development, and how to contact me.",
         );
-      document
-        .querySelector("meta[property='og:image']")
-        .setAttribute(
-          "content",
-          "https://media.licdn.com/dms/image/D4E16AQEmVSTYlCjtPA/profile-displaybackgroundimage-shrink_350_1400/0/1712592186545?e=1718236800&v=beta&t=d3E_iMvCwbOfjVeMbnD1vEYqzIPo7uxBQiL8bA7pG1E",
-        );
-      document
-        .querySelector("meta[property='og:type']")
-        .setAttribute("content", "website");
     };
-  }, [currentPost.introduction, currentPost.ogImage]);
+  }, [currentPost.introduction]);
 
   return (
     <AnimatedPage>
