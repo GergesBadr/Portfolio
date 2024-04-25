@@ -15,11 +15,17 @@ function Post() {
   // Update meta data for each post page
   useEffect(() => {
     document
+      .querySelector("meta[property='og:title']")
+      .setAttribute("content", currentPost.title);
+    document
       .querySelector("meta[name='description']")
       .setAttribute("content", currentPost.introduction);
 
     // Cleanup to default
     return () => {
+      document
+        .querySelector("meta[property='og:title']")
+        .setAttribute("content", "Gerges Badr Portfolio");
       document
         .querySelector("meta[name='description']")
         .setAttribute(
@@ -27,7 +33,7 @@ function Post() {
           "Welcome to my portfolio, here you will find everything you need/want to know about me, who am I, what I do, what can I offer for you, what projects I have done, what are my thoughts about frontend development, and how to contact me.",
         );
     };
-  }, [currentPost.introduction]);
+  }, [currentPost.introduction, currentPost.title]);
 
   return (
     <AnimatedPage>
