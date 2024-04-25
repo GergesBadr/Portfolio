@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { HiBars3BottomRight } from "react-icons/hi2";
 import { motion } from "framer-motion";
@@ -6,6 +6,20 @@ import ToggleTheme from "./ToggleTheme";
 
 function Header() {
   const [isOpenHeader, setIsOpenHeader] = useState(true);
+  const onSmallScreens = window.innerWidth < 640;
+
+  // Close header on mobile screen
+  useEffect(() => {
+    function toggleHeader() {
+      setIsOpenHeader(!onSmallScreens);
+    }
+    toggleHeader();
+
+    window.addEventListener("resize", toggleHeader);
+    return () => {
+      window.removeEventListener("resize", toggleHeader);
+    };
+  }, [onSmallScreens]);
 
   const links = [
     { name: "Home", to: "/home" },
