@@ -1,14 +1,14 @@
-import { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import ProjectsList from "../components/projects/ProjectsList";
 import AnimatedPage from "./AnimatedPage";
 
 function Projects() {
-  useEffect(() => {
-    document.title = "Gerges Badr | Projects";
-  }, []);
-
   return (
     <AnimatedPage>
+      <Helmet>
+        <title>Gerges Badr | Projects</title>
+      </Helmet>
+
       <ProjectsList />
     </AnimatedPage>
   );

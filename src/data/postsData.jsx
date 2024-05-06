@@ -47,6 +47,7 @@ const postsData = [
     urlTitle: "accessibility-introduction",
     date: new Date("2024-03-16"),
     category: "Accessibility",
+    ogImage: "https://i.ibb.co/5T8XLWf/Accessibility.jpg",
     introduction:
       "What is accessibility, why it matters, how to implement it and what guidelines you should follow?",
     content: (
@@ -94,7 +95,7 @@ const postsData = [
         <h2 className="heading-2"> Types of disabilities</h2>
         <p>
           There are different types of disabilities, each with it's unique
-          requirements and handling methods, theses types include:{" "}
+          requirements and handling methods, these types include:{" "}
         </p>
         <ul className="list-decimal">
           <li>
@@ -169,7 +170,7 @@ const postsData = [
           How do we say that this website is accessible and that one is not?
           WCAG provided us some principles to follow,{" "}
           <span className="font-medium">POUR</span> principles, by following
-          theses principles you can focus on how your products are used by real
+          these principles you can focus on how your products are used by real
           humans, including people with disabilities.
         </p>
         <h3 className="heading-3">1. Perceivable</h3>
@@ -306,7 +307,8 @@ const postsData = [
     title: "Custom CSS selectors with Tailwind",
     urlTitle: "tailwind-arbitrary-variants",
     date: new Date("2024-03-23"),
-    category: "Tailwind",
+    category: "CSS",
+    ogImage: "https://i.ibb.co/B63Bgyd/tailwind.jpg",
     introduction:
       "How to write custom css selectors directly in your html with tailwind, what is arbitrary variants and arbitrary values in tailwind and how to use them effectively to power your tailwind skills",
     content: (
@@ -518,6 +520,422 @@ const postsData = [
         <p>
           And I am pretty sure you will find the right answers. See you soon!
         </p>
+      </>
+    ),
+  },
+
+  {
+    id: 3,
+    title: "How the web works?",
+    urlTitle: "how-the-web-works",
+    date: new Date("2024-05-5"),
+    category: "General",
+    ogImage: "https://i.ibb.co/F4ghNG3/internet.jpg",
+    introduction:
+      "What happens when you type google.com in your browser and hit enter?",
+    content: (
+      <>
+        <img
+          src="https://i.ibb.co/F4ghNG3/internet.jpg"
+          alt="laptop at a desk, with google chrome browser opened in google search page."
+          className="mb-4 rounded-lg"
+        ></img>
+        <p>
+          In this article, we are going to discuses how the web works, it's
+          components, and how each one of them communicate to one another. But
+          before we do so, first we have to talk about the internet itself, are
+          they the same thing? and if not, what is the difference between the
+          internet and the web?
+        </p>
+        <p>
+          Okay, the internet and the web are two different things. the internet
+          is the physical infrastructure itself, it's literally some cables and
+          wires. The main idea beyond the internet was that: if two computers
+          are connect together (by cables) then they can communicate to each
+          other, and that's whats happening right now.
+        </p>
+        <p>
+          There is a myth about the internet that non-technical people seem to
+          believe, which says that the internet is in the "cloud" using
+          satellites, it's in the air! like the Wi-Fi connection, which is: A
+          wireless networking technology. But, that's simply wrong, why? because
+          if we did so, the nearest satellite in the space to us, would be VERY,
+          VERY far from us. So, the data would have to travel a long distance go
+          and back to reach you, causing a significant delay to the response.
+        </p>
+        <p>
+          Now let's talk about the web, which you can think about it as it's a{" "}
+          <strong>service</strong> or an <strong>application</strong> build on
+          top of the internet, so it's a part of it, a way for us to use the
+          internet.
+        </p>
+        <Note>
+          <p>
+            Remember, the ultimate goal of all of this, the internet or the web,
+            is to allow users to find any needed information, as simple as that.
+          </p>
+        </Note>
+        <h2 className="heading-2">Web components</h2>
+        <p>
+          Now, for the web to work effectively, it has a few parts that works
+          and communicates together to achieve this goal. Which are:
+        </p>
+        <ul>
+          <li>
+            <h3 className="heading-3">Client</h3>
+            <p>
+              A client is what the user use to get their information, it's any
+              device that has an internet connection and a web-accessing
+              software on it (Read below). Your phone, laptop, or your PC can be
+              called a client.
+            </p>
+          </li>
+          <li>
+            <h3 className="heading-3">Server</h3>
+            <p>
+              Now we have a <span className="code">user</span> who use a{" "}
+              <span className="code">client</span> to get an{" "}
+              <span className="code">information</span>, so, where is this
+              information exactly? here we introduce the server, it's also a
+              computer, just like your computer, but with much more power and
+              abilities that allow it to work 24/7. It's the place where we
+              store our webpages, files, or any kind of data, so that when a
+              client wants to see this information, a copy is downloaded and be
+              displayed to them.
+            </p>
+          </li>
+          <li>
+            <h3 className="heading-3">Internet connection</h3>
+            <p>
+              It only goal is to allow us to send and receive data in the
+              internet by any means, like on the web!
+            </p>
+            <p>
+              That's what your ISP (Internet service provider) provide you with,
+              that's what you pay for basically.
+            </p>
+          </li>
+          <li>
+            <h3 className="heading-3">TCP & IP</h3>
+            <p>
+              Imagine the traffic rules, not anyone can go and move anywhere at
+              anytime, and that's for a reason, to prevent anything illegal to
+              happen, we have to follow these rules.
+            </p>
+            <p>
+              Just like traffic rules in an city, the internet has it's own
+              rules we call the protocols, also to prevent anything
+              illegal/wrong to happen.{" "}
+              <strong>Transmission Control Protocol</strong> and{" "}
+              <strong>Internet Protocol</strong> are some protocols among
+              others. They define how data should travel across the internet.
+            </p>
+          </li>
+          <li>
+            <h3 className="heading-3">DNS</h3>
+            <p>
+              We live in homes, any home has it's own unique address. Also, the{" "}
+              <strong>Domain Name System</strong> is the address of the websites
+              we want to see. Computers does not understand anything but
+              numbers, and we, humans, has a very effective way to communicate,
+              which is...?
+            </p>
+            <p>
+              Exactly, words and languages! so, for us to communicate well with
+              our computer to tell it what we want to search for in the
+              internet, we created the domain name system, to be like a bridge
+              between us.
+            </p>
+            <p>
+              Any computer device (PC, Phone, Laptop, even your electronic
+              microwave or fridge) has it's own unique IP (Internet protocol),
+              like us humans has our own unique fingerprint. Also, any website
+              in the internet has an IP address, this IP usually in the form
+              like <span className="code">192.65.87.12</span>, But imagine each
+              time you go to search for a webpage or any data in the internet
+              and you have to remember and type these numbers again and again!
+            </p>
+            <p>
+              What we actually do is type for example{" "}
+              <span className="code">google.com</span>, this called a{" "}
+              <strong>domain name</strong>, which is the language we understand,
+              so, the main goal for a DNS system is to resolve names to numbers,
+              or in other words, resolve <strong>domains</strong> to{" "}
+              <strong>IP addresses</strong>.
+            </p>
+            <p>
+              But how it does so? what happens when we type{" "}
+              <span className="code">gergesbadr.com</span> in our search bar and
+              hit enter? Here is the journey that the DNS takes to give you back
+              your results:
+            </p>
+            <ol className="list-decimal marker:font-bold marker:text-indigo-500">
+              <li>
+                First, your browser or your OS (operating system) will try to
+                find the IP address for{" "}
+                <span className="code">gergesbadr.com</span> in it's cache. If
+                it was found, meaning that you have typed this domain or visited
+                this resource before, it will resolve it's IP address and show
+                you the result.
+              </li>
+              <li>
+                If not, the query (the domain the entered) will be sent to the
+                next lever, the resolver server. It's your ISP, and again, it
+                will try to find the IP in it's cache
+              </li>
+              <li>
+                If there was no data in you ISP cache, then let's go to the next
+                level, the root server. Notice that the root server itself does
+                not have any information about any IP address for any site, but
+                it's still helpful, because it will forward you to the right
+                next level, the TLD (Top Level Domain) server.
+              </li>
+              <li>
+                The TLD server maintains information for all Top-Level-Domain
+                names such as <span className="code">.com, .net, .org</span> and
+                now it knows that it need to search for an IP address
+                specifically in a <span className="code">.com</span> TLD, why?
+                because the root server in the previous step give it this
+                information. Unfortunately, it also does't know the IP, buy it
+                will redirect you to the final level, Authoritative servers.
+              </li>
+              <li>
+                The Authoritative servers responsibility is to know everything
+                about any domain including it's IP address. good, that's what we
+                want to get! Now it will send you back the IP address for{" "}
+                <span className="code">gergesbadr.com</span> and it's content
+                (the html page, images, text, etc...) will be displayed for you.
+              </li>
+            </ol>
+            <p>
+              Notice that you don't have to go allover these steps every time
+              you search for anything, that's why I mentioned in the first step
+              that your browser or OS will search it's cache first, this cache
+              is a a strong place for what you have visited before, so that it
+              can be displayed to you fast.
+            </p>
+            <p>
+              Also, what if after all of these steps, there is really no IP
+              address with the specific domain name you typed, like{" "}
+              <span className="code">wrong-domain.com</span>? Well, at the end
+              of the previous steps, the authoritative servers will return some
+              error which you will see at your browser, simply saying “This site
+              can't be reached”.
+            </p>
+            <p>
+              <img
+                src="https://www.cloudns.net/blog/wp-content/uploads/2023/04/Authoritative-DNS-server-2048x1154.png"
+                alt="how DNS works, illustration."
+              />
+              <small>
+                An illustration image for these steps, image from{" "}
+                <a href="https://www.cloudns.net/">cloudns</a>
+              </small>
+            </p>
+          </li>
+          <li>
+            <h3 className="heading-3">HTTP</h3>
+            <p>
+              As I said before, what happens is that you ask for information,
+              your client tries to get it from the server, but how it does so?
+              The <strong>Hypertext Transfer Protocol</strong> is the language
+              that the server and client speak to each other. The HTTP is
+              evolving, the first version of it with the simplest protocol,
+              allowing only the GET method and that was in 1991. Then it started
+              gets more and more updates until it become what we know now.
+            </p>
+            <p>
+              It follows a request-response structure where the browser requests
+              data, and the server responds with the requested information. Each
+              http request has a specific structure we commonly name it{" "}
+              <strong>"HTTP request anatomy"</strong> which contain the
+              following:
+            </p>
+            <ul className="list-disc">
+              <li>
+                <strong>The top layer:</strong> Consists of the HTTP method,
+                URL, and the protocol version.
+              </li>
+              <li>
+                <strong>Headers:</strong> It provides extra info about the
+                request to the server. There are many different headers, like{" "}
+                <span className="code">Content-Type</span>,{" "}
+                <span className="code">Content-Length</span>, and{" "}
+                <span className="code">User-Agent</span>.
+              </li>
+              <li>
+                <strong>Body (optional):</strong> Contains the data that the
+                client sent to the server in case of{" "}
+                <span className="code">PUT</span>,{" "}
+                <span className="code">POST</span>, or{" "}
+                <span className="code">PATCH</span> methods.
+              </li>
+            </ul>
+            <p>
+              The HTTP response can be a lot of status, so, we give each status
+              it's code, and that's hundreds of them so you of course you don't
+              have to remember them all, you already know common ones like 404
+              or 200. Here is the category of the HTTP status codes:
+            </p>
+            <div>
+              <img
+                src="https://static.semrush.com/blog/uploads/media/3a/79/3a7950050980a0e2de37bc1a632cc321/wmkPPztB7KlAC7fPzO0-85NG8t0B9IEh4JEbt_ELP1pvJMhof9vt2pDSwrBZeXodoqaoV_Es1Rur-AWoeoOdV-RIde2vjqyMQuxrqch62uXZ1bsI0yaaMWx-f4cg4BlmOQrI2kFJ6CPXECCd69KeopE.webp"
+                alt="http status codes"
+              />
+              <small>
+                Image from{" "}
+                <a href="https://www.semrush.com/blog/http-status-codes/">
+                  semrush
+                </a>{" "}
+                article about http status codes
+              </small>
+            </div>
+          </li>
+          <li>
+            <h3 className="heading-3">Hosting</h3>
+            <p>
+              Hosting is the service that's responsible to make your website
+              public, meaning that anyone can see and interact with it's
+              content. Think about the IP address like your home address and
+              hosting like your physical space that you have and built your
+              house on it, you website also should have a place to be "stored"
+              at.
+            </p>
+            <p>
+              When you start a hosting plan in any web hosting service provider,
+              you actually renting a space on a physical server that stores and
+              manage your website files and data.
+            </p>
+            <p>
+              There are many types of hosting, like{" "}
+              <strong>shared hosting</strong>,{" "}
+              <strong>dedicated web hosting</strong>,{" "}
+              <strong>VPS (Virtual Private Server)</strong> and{" "}
+              <strong>cloud hosting.</strong> each has it's own use and
+              advantages.
+            </p>
+          </li>
+          <li>
+            <h3 className="heading-3">Browsers</h3>
+            <p>
+              browsers are the software we use to access the web, some people
+              call them clients also. They are responsible to get the files from
+              a web server and displays it to the user's screen. Each browser
+              has multiple components that works to achieve this goal, like it's{" "}
+              <strong>interface</strong>, <strong>the browser engine</strong>,
+              and <strong>the rendering engine</strong>.
+            </p>
+            <Note>
+              <p>
+                Here is an interesting fact, browsers only understand HTML, CSS
+                and Javascript. Nothing else!
+              </p>
+              <p>
+                So, they process HTML for structure, CSS for presentation, and
+                JavaScript for interactivity.
+              </p>
+              <p>
+                What is React, Jquery, Angular and all of these libraries and
+                frameworks then? how do the browser understand it if it's not
+                HTML, CSS, and JS? Well, it doesn't. because all of these tools
+                are just HTML, CSS, and JS. They just has a different way to
+                write the same thing.
+              </p>
+            </Note>
+          </li>
+          <li>
+            <h3 className="heading-3">URL</h3>
+            <p>
+              The URL is what you type in your browser search bar to get
+              something from the internet. We have something that's called a URL
+              anatomy, which represent the URL parts (See image below).
+            </p>
+            <p>
+              Notice that the <span className="code">www.example.com</span> is
+              actually consists of three parts. The{" "}
+              <span className="code">www</span> is called the subdomain. The{" "}
+              <span className="code">example</span> is the domain itself. The{" "}
+              <span className="code">.com</span> is the TLD
+            </p>
+            <img
+              src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*cih496PZ5DyEubgfYUq3Zw.png"
+              alt="URL structure"
+            />
+          </li>
+        </ul>
+        <h2 className="heading-2">Conclusion </h2>
+        <p>
+          Now that we know all of these components, what they do, how they work
+          together, it's the time to wrap up and discuses the process from the
+          beginning to the end, after typing{" "}
+          <span className="code">www.gergesbadr.com</span> into the browser,
+          here is what's happening:
+        </p>
+        <ol className="list-decimal marker:font-bold marker:text-indigo-500">
+          <li>
+            The <span className="code">browser</span> will try to find the real{" "}
+            <span className="code">IP address</span> for the website you write{" "}
+            with the help of the <span className="code">DNS server</span>
+          </li>
+          <li>
+            The browser will send a <span className="code">HTTP request</span>{" "}
+            from your <span className="code">client</span> to the{" "}
+            <span className="code">server</span> asking it to show you the
+            content of the website you searched for. (This message and any other
+            data sent between any client and server is by your{" "}
+            <span className="code"> internet connection </span> and following
+            the <span className="code">TCP/IP</span> rules.)
+          </li>
+          <li>
+            The server will get the request and send back a response to the
+            client with the data that should be displayed. (As a data
+            packets/units)
+          </li>
+          <li>
+            The browser will collect the small packets and make a complete
+            webpage of it to be displayed to you.
+          </li>
+        </ol>
+        <p>
+          Did you imagined how many different softwares/hardwares worked
+          together in order of you to read this article for example? The
+          internet has a very complicated structure with many layers, imagine
+          that anything I have mentioned here could go wrong or had a bug that
+          prevents you from searching what you wanted to search for!
+        </p>
+        <h2 className="heading-2">Recourses & References</h2>
+        <ul className="list-disc">
+          <li>
+            <a href="https://internetfundamentals.com">
+              Internet fundamentals course
+            </a>{" "}
+            from frontend masters
+          </li>
+          <li>
+            <a href="https://www.youtube.com/watch?v=AXVZYzw8geg&t=1s&ab_channel=CraylorMade">
+              Different types of web hosting
+            </a>{" "}
+            (Youtube video)
+          </li>
+          <li>
+            <a href="https://youtu.be/A31bxOyj5mk?si=q8GRBvoM0wUiuhr3">
+              How the internet works - OSI layers
+            </a>{" "}
+            (Youtube video)
+          </li>
+          <li>
+            <a href="https://github.com/alex/what-happens-when?tab=readme-ov-file#behind-the-scenes-of-the-browser">
+              What happens when...
+            </a>{" "}
+            (Github repo)
+          </li>
+          <li>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers">
+              HTTP headers
+            </a>{" "}
+            (article from mozilla developer)
+          </li>
+        </ul>
       </>
     ),
   },

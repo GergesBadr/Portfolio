@@ -1,7 +1,7 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { HiArrowLeft } from "react-icons/hi2";
 import { format } from "date-fns";
-import { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import postsData from "../data/postsData";
 import AnimatedPage from "./AnimatedPage";
 import useCalcReadingTime from "../hooks/useCalcReadingTime";
@@ -12,31 +12,18 @@ function Post() {
   const currentPost = postsData.find((post) => post.urlTitle === urlTitle);
   const readingTime = useCalcReadingTime(".post-content");
 
-  // Update meta data for each post page
-  useEffect(() => {
-    document
-      .querySelector("meta[property='og:title']")
-      .setAttribute("content", currentPost.title);
-    document
-      .querySelector("meta[name='description']")
-      .setAttribute("content", currentPost.introduction);
-
-    // Cleanup to default
-    return () => {
-      document
-        .querySelector("meta[property='og:title']")
-        .setAttribute("content", "Gerges Badr Portfolio");
-      document
-        .querySelector("meta[name='description']")
-        .setAttribute(
-          "content",
-          "Welcome to my portfolio, here you will find everything you need/want to know about me, who am I, what I do, what can I offer for you, what projects I have done, what are my thoughts about frontend development, and how to contact me.",
-        );
-    };
-  }, [currentPost.introduction, currentPost.title]);
-
   return (
     <AnimatedPage>
+      {/* Update meta data for each post page */}
+      <Helmet>
+        <title>{currentPost.title}</title>
+        <meta name="description" content={currentPost.introduction} />
+        <meta property="og:description" content={currentPost.introduction} />
+        <meta property="og:title" content={currentPost.title} />
+        <meta property="og:image" content={currentPost.ogImage} />
+        <meta property="og:type" content="article" />
+      </Helmet>
+
       <article className="mx-auto mt-32 max-w-[725px] px-4 pb-20 sm:mt-48">
         <button
           onClick={() => navigate(-1)}
@@ -52,7 +39,7 @@ function Post() {
         </p>
 
         {/* Post content */}
-        <div className="[&_a]:unique-text post-content mt-6 text-lg">
+        <div className="[&_a]:unique-text post-content mt-10 text-lg">
           {currentPost.content}
         </div>
       </article>

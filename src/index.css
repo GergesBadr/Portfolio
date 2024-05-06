@@ -39,7 +39,7 @@
     @apply border-b-2 border-b-indigo-500 font-medium;
   }
   .post-content h2 {
-    @apply mb-8 mt-20 w-fit border-b-4 border-b-indigo-600 pb-4;
+    @apply mb-8 mt-20  bg-indigo-100 dark:bg-secondary-dark rounded-lg p-4;
   }
   .post-content h3 {
     @apply mb-6 mt-14;

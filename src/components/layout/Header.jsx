@@ -1,25 +1,12 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { HiBars3BottomRight } from "react-icons/hi2";
 import { motion } from "framer-motion";
 import ToggleTheme from "./ToggleTheme";
 
 function Header() {
-  const [isOpenHeader, setIsOpenHeader] = useState(true);
   const onSmallScreens = window.innerWidth < 640;
-
-  // Close header on mobile screen
-  useEffect(() => {
-    function toggleHeader() {
-      setIsOpenHeader(!onSmallScreens);
-    }
-    toggleHeader();
-
-    window.addEventListener("resize", toggleHeader);
-    return () => {
-      window.removeEventListener("resize", toggleHeader);
-    };
-  }, [onSmallScreens]);
+  const [isOpenHeader, setIsOpenHeader] = useState(!onSmallScreens);
 
   const links = [
     { name: "Home", to: "/home" },
@@ -67,7 +54,7 @@ function Header() {
       <motion.header
         className={`fixed right-0 top-0 z-[1] flex h-dvh w-[75%] flex-col items-start gap-6 overflow-hidden bg-white px-6 py-20 shadow-primary-shadow-light dark:bg-secondary-dark dark:shadow-primary-shadow-dark sm:left-1/2 sm:top-8 sm:h-auto sm:w-fit sm:-translate-x-1/2 sm:flex-row sm:items-center sm:rounded-full sm:py-5 `}
         variants={listVariants}
-        initial="visible"
+        initial={isOpenHeader ? "visible" : "hidden"}
         animate={isOpenHeader ? "visible" : "hidden"}
       >
         <nav>

@@ -3,7 +3,7 @@ import postsData from "../../data/postsData";
 import PostItemThumbnail from "../blog/PostItemThumbnail";
 
 function RecentPosts() {
-  const recent = postsData.sort((a, b) => compareAsc(a.date, b.date));
+  const recent = postsData.sort((a, b) => compareAsc(b.date, a.date));
   const lastThreePosts = recent.length > 3 ? recent.slice(0, 3) : recent;
 
   return (

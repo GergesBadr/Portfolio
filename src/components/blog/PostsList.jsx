@@ -13,7 +13,7 @@ function PostsList() {
   );
 
   const displayedPosts = filteredPosts.length > 0 ? filteredPosts : postsData;
-  displayedPosts.sort((a, b) => compareAsc(a.date, b.date));
+  displayedPosts.sort((a, b) => compareAsc(b.date, a.date));
 
   return (
     <section>
