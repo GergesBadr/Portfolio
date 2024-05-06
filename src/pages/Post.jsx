@@ -1,10 +1,10 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { HiArrowLeft } from "react-icons/hi2";
 import { format } from "date-fns";
-import { Helmet } from "react-helmet-async";
 import postsData from "../data/postsData";
 import AnimatedPage from "./AnimatedPage";
 import useCalcReadingTime from "../hooks/useCalcReadingTime";
+import useUpdateSeo from "../hooks/useUpdateSeo";
 
 function Post() {
   const navigate = useNavigate();
@@ -12,18 +12,14 @@ function Post() {
   const currentPost = postsData.find((post) => post.urlTitle === urlTitle);
   const readingTime = useCalcReadingTime(".post-content");
 
+  useUpdateSeo(
+    currentPost.title,
+    currentPost.introduction,
+    currentPost.ogImage,
+  );
+
   return (
     <AnimatedPage>
-      {/* Update meta data for each post page */}
-      <Helmet>
-        <title>{currentPost.title}</title>
-        <meta name="description" content={currentPost.introduction} />
-        <meta property="og:description" content={currentPost.introduction} />
-        <meta property="og:title" content={currentPost.title} />
-        <meta property="og:image" content={currentPost.ogImage} />
-        <meta property="og:type" content="article" />
-      </Helmet>
-
       <article className="mx-auto mt-32 max-w-[725px] px-4 pb-20 sm:mt-48">
         <button
           onClick={() => navigate(-1)}
