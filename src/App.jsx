@@ -3,7 +3,6 @@ import { lazy, Suspense } from "react";
 import { AnimatePresence, MotionConfig } from "framer-motion";
 import { ErrorBoundary } from "react-error-boundary";
 import { ThemeContextProvider } from "./contexts/ThemeContext";
-import { HelmetProvider } from "react-helmet-async";
 
 const Header = lazy(() => import("./components/layout/Header"));
 const Home = lazy(() => import("./pages/Home"));
@@ -29,7 +28,6 @@ function App() {
           >
             <Header />
 
-            <HelmetProvider>
               <AnimatePresence mode="wait">
                 <Routes location={location} key={location.pathname}>
                   <Route index element={<Navigate to="/home" replace />} />
@@ -42,7 +40,6 @@ function App() {
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </AnimatePresence>
-            </HelmetProvider>
 
             <Footer />
           </ErrorBoundary>
