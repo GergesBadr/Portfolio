@@ -1,14 +1,14 @@
 import { useRef } from "react";
 import SkillsItem from "./SkillsItem";
 
-import html from "../../assets/skills/html.png";
-import css from "../../assets/skills/css3.png";
-import javascript from "../../assets/skills/javascript.png";
+import html from "../../assets/skills/html.webp";
+import css from "../../assets/skills/css.webp";
+import javascript from "../../assets/skills/javascript.webp";
 import react from "../../assets/skills/react.webp";
-import tailwind from "../../assets/skills/tailwind.png";
+import tailwind from "../../assets/skills/tailwind.webp";
 import accessibility from "../../assets/skills/accessibility.webp";
-import git from "../../assets/skills/git.png";
-import framer from "../../assets/skills/framer.png";
+import git from "../../assets/skills/git.webp";
+import framer from "../../assets/skills/framer.webp";
 import supabase from "../../assets/skills/supabase.svg";
 import reduxToolkit from "../../assets/skills/redux.svg";
 import reactQuery from "../../assets/skills/react-query.svg";

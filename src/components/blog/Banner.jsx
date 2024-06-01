@@ -1,4 +1,4 @@
-import bannerBg from "../../assets/blog-banner.jpg";
+import bannerBg from "../../assets/blog-banner.webp";
 
 function Banner() {
   return (

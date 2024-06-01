@@ -1,15 +1,13 @@
 /* eslint-disable react/no-unescaped-entities */
-import caraECommerce from "../assets/projects/cara-e-commerce.png";
-import adviceGeneratorApp from "../assets/projects/advice-generator-app.png";
-import ageCalculatorApp from "../assets/projects/age-calculator-app.png";
-import bookmark from "../assets/projects/bookmark-landing-page.png";
-import multiStepForm from "../assets/projects/multi-step-form.png";
-import quizApp from "../assets/projects/quiz-app.png";
-import restCountriesApi from "../assets/projects/rest-countries-api.png";
-import spaceTourism from "../assets/projects/space-tourism.png";
-import theWildOasis from "../assets/projects/the-wild-oasis.png";
-import todoApp from "../assets/projects/todo-app.png";
-import urlShorteningApi from "../assets/projects/url-shortening-api.png";
+import caraECommerce from "../assets/projects/cara-e-commerce.webp";
+import ageCalculatorApp from "../assets/projects/age-calculator-app.webp";
+import bookmark from "../assets/projects/bookmark-landing-page.webp";
+import multiStepForm from "../assets/projects/multi-step-form.webp";
+import quizApp from "../assets/projects/quiz-app.webp";
+import restCountriesApi from "../assets/projects/rest-countries-api.webp";
+import spaceTourism from "../assets/projects/space-tourism.webp";
+import theWildOasis from "../assets/projects/the-wild-oasis.webp";
+import todoApp from "../assets/projects/todo-app.webp";
 
 const projectsData = [
   {
@@ -53,31 +51,6 @@ const projectsData = [
           In this project, I discovered the amazing framer motion library, which
           allowed me, with a great developer experience, to implement exciting
           and engaging animations
-        </p>
-      </div>
-    ),
-  },
-
-  {
-    id: 2,
-    priority: 3,
-    image: adviceGeneratorApp,
-    title: "Advice Generator App",
-    description: "Generating random quotes of advices.",
-    tags: ["HTML", "CSS", "JS"],
-    gitHub: "https://github.com/GergesBadr/advice-app-generator",
-    demo: "https://gergesbadr.github.io/advice-app-generator/",
-    details: (
-      <div className="project-details">
-        <p>
-          A simple app with a nice user-interface that's works with an API to
-          display a great advice to users with each button clicks.
-        </p>
-        <p>
-          Used API:{" "}
-          <a href="https://api.adviceslip.com/" target="_blank">
-            Advice slip api
-          </a>{" "}
         </p>
       </div>
     ),
@@ -193,7 +166,7 @@ const projectsData = [
 
   {
     id: 7,
-    priority: 2,
+    priority: 3,
     image: restCountriesApi,
     title: "Rest Countries Api",
     featured: true,
@@ -338,29 +311,6 @@ const projectsData = [
           <li>Saved current tasks in localStorage</li>
           <li>Light and dark theme</li>
         </ul>
-      </div>
-    ),
-  },
-
-  {
-    id: 11,
-    priority: 2,
-    image: urlShorteningApi,
-    title: "URL Shortening API",
-    description: "Simple and responsive landing-page to shorten your URLs",
-    tags: ["React", "Tailwind"],
-    gitHub: "https://github.com/GergesBadr/URL-shortening-API-landing-page",
-    demo: "https://shorten-url-landing-page.netlify.app/",
-    details: (
-      <div className="project-details">
-        <p>Simple and responsive landing-page to shorten your URLs.</p>
-        <h2 className="heading-2">Features:</h2>
-        <ol className="list-disc">
-          <li>Shorten URL on the fly, in one click</li>
-          <li>Copy URLs</li>
-          <li>Saved previous shorten URLs</li>
-          <li>Delete a URL if you don't need it anymore</li>
-        </ol>
       </div>
     ),
   },

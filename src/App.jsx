@@ -28,18 +28,18 @@ function App() {
           >
             <Header />
 
-              <AnimatePresence mode="wait">
-                <Routes location={location} key={location.pathname}>
-                  <Route index element={<Navigate to="/home" replace />} />
-                  <Route path="/home" element={<Home />} />
-                  <Route path="/about" element={<About />} />
-                  <Route path="/projects" element={<Projects />} />
-                  <Route path="/blog" element={<Blog />} />
-                  <Route path="/blog/:urlTitle" element={<Post />} />
-                  <Route path="/contact" element={<Contact />} />
-                  <Route path="*" element={<NotFound />} />
-                </Routes>
-              </AnimatePresence>
+            <AnimatePresence mode="wait">
+              <Routes location={location} key={location.pathname}>
+                <Route index element={<Navigate to="/home" replace />} />
+                <Route path="/home" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/projects" element={<Projects />} />
+                <Route path="/blog" element={<Blog />} />
+                <Route path="/blog/:urlTitle" element={<Post />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </AnimatePresence>
 
             <Footer />
           </ErrorBoundary>
