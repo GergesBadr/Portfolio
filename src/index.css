@@ -25,21 +25,21 @@
 
   /* Headings */
   .heading-1 {
-    @apply text-[clamp(2rem,5vw,2.5rem)] font-black;
+    @apply text-[clamp(2.25rem,5vw,2.75rem)] font-black;
   }
   .heading-2 {
-    @apply text-[clamp(1.5rem,4vw,2rem)] font-bold;
+    @apply text-[clamp(1.75rem,4vw,2rem)] font-bold;
   }
   .heading-3 {
-    @apply text-[clamp(1rem,3vw,1.5rem)] font-semibold;
+    @apply text-[clamp(1.5rem,3.5vw,1.75rem)] font-semibold;
   }
 
   /* Post content */
   .post-content a {
-    @apply border-b-2 border-b-indigo-500 font-medium;
+    @apply unique-text border-b-2 border-b-indigo-600 font-medium hover:border-b-0 dark:border-b-indigo-400;
   }
   .post-content h2 {
-    @apply mb-8 mt-20  bg-indigo-100 dark:bg-secondary-dark rounded-lg p-4;
+    @apply mb-8 mt-20 rounded-lg bg-indigo-100 p-4 dark:bg-secondary-dark;
   }
   .post-content h3 {
     @apply mb-6 mt-14;
@@ -49,7 +49,7 @@
   }
   .post-content ol,
   .post-content ul {
-    @apply mb-10 list-inside space-y-2 sm:list-outside;
+    @apply mb-10 list-inside space-y-2 sm:list-outside marker:text-orange-500;
   }
 
   /* Project-details */

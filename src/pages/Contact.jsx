@@ -1,18 +1,36 @@
+import { Helmet } from "react-helmet-async";
 import AnimatedPage from "./AnimatedPage";
 import ContactInfo from "../components/contact/ContactInfo";
 import ContactForm from "../components/contact/ContactForm";
-import useUpdateSeo from "../hooks/useUpdateSeo";
 
 function Contact() {
-  useUpdateSeo("Gerges Badr | Contact Me");
-
   return (
-    <AnimatedPage>
-      <section className="responsive-container grid grid-cols-1 gap-12 md:grid-cols-2">
-        <ContactInfo />
-        <ContactForm />
-      </section>
-    </AnimatedPage>
+    <>
+      <Helmet>
+        <title>Gerges Badr | Contact Me</title>
+        <meta property="og:title" content="Gerges Badr | Contact Me" />
+        <meta
+          name="description"
+          content="Welcome to my portfolio, where you can find everything you need to know about me, who am I, what can I offer you, what projects I have done and how to contact me."
+        />
+        <meta
+          property="og:description"
+          content="Welcome to my portfolio, where you can find everything you need to know about me, who am I, what can I offer you, what projects I have done and how to contact me."
+        />
+        <meta
+          property="og:image"
+          content="https://i.ibb.co/dt1NJGW/portfolio-thumbnail.png"
+        />
+        <meta property="og:type" content="website" />
+      </Helmet>
+
+      <AnimatedPage>
+        <section className="responsive-container grid grid-cols-1 gap-12 md:grid-cols-2">
+          <ContactInfo />
+          <ContactForm />
+        </section>
+      </AnimatedPage>
+    </>
   );
 }
 

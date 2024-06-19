@@ -1,5 +1,11 @@
 import Note from "../components/blog/Note";
 
+// Images
+import personUsingLaptopSmall from "../assets/posts/images-post/person-using-laptop-small.webp";
+import personUsingLaptopLarge from "../assets/posts/images-post/person-using-laptop-large.webp";
+import mountainsSmall from "../assets/posts/images-post/mountains-small.jpg";
+import mountainsLarge from "../assets/posts/images-post/mountains-large.jpg";
+
 // Highlighting code syntax
 import { Light as SyntaxHighlighter } from "react-syntax-highlighter";
 import js from "react-syntax-highlighter/dist/esm/languages/hljs/javascript";
@@ -16,7 +22,7 @@ const codeCustomStyle = {
   marginTop: "1rem",
 };
 
-// Codes used in tailwind article
+// Codes used in tailwind post
 const tailwindCode = `.post-content p {
   @apply mb-4 text-lg;
 }`;
@@ -39,6 +45,37 @@ const tailwindCode3 = `// Give every odd child red text
 `;
 const tailwindCode4 = `[&_p]:mb-4 [&_p]:text-lg [&_p]:font-medium [&_p]:leading-relaxed`;
 
+// Codes used in images post
+const decorativeImage = `<div className="h-[300px] w-full rounded-lg bg-[url(image-path-here)] bg-cover bg-center bg-no-repeat">
+  <div className="flex h-full w-full items-end justify-end bg-gradient-to-t from-black/40 p-10 text-2xl text-white">
+    Lorem Ipsum!
+  </div>
+</div>`;
+const contextualImage = `<div className="relative">
+  <img
+    sizes="(max-width: 375px) 375px, 1440px"
+    srcSet={small-image-path 375w, large-image-path 1440w}
+    src={small-image-path}
+    alt="Example alt text for the demonstration."
+    loading="lazy"
+    className="h-[200px] rounded-lg object-cover"
+  />
+  <div className="absolute inset-0 flex items-end justify-end bg-gradient-to-t from-black/40 p-10 text-2xl text-white">
+    Lorem Ipsum!
+  </div>
+</div>`;
+const cssImages = `<!-- image will be downloaded because the element is rendered. -->
+<div style="background: url(img-1.png)"></div>
+
+<!-- image will be downloaded because the element's style is calculated -->
+<div style="background: url(img-4.png); visibility: hidden"></div>
+
+<!-- image will NOT be downloaded because the parent element has its display set to none. -->
+<div style="display:none">
+  <div style="background: url(img-2.png)"></div>
+</div>
+`;
+
 /* eslint-disable react/no-unescaped-entities */
 const postsData = [
   {
@@ -53,7 +90,7 @@ const postsData = [
     content: (
       <>
         <p>Consider the following cases:</p>
-        <ul className="list-disc">
+        <ul className="list-disc ">
           <li>
             If you are wearing medical glasses, like me, take them off and try
             to read this post. Can you see the text?
@@ -141,7 +178,7 @@ const postsData = [
           <p className="text-xl font-semibold tracking-wide">
             Other types of disabilities:
           </p>
-          <ul className="list-disc space-y-2">
+          <ul className="list-disc space-y-2 ">
             <li>
               <span className="font-medium">Temporary disabled:</span> Maybe
               someone has a broken arm but just for short time.
@@ -246,7 +283,7 @@ const postsData = [
           learn more about a11y and how to use it, here are some resources to
           refer to, I hope this helps, thanks for reading and see you next time!
         </p>
-        <ul className="list-disc">
+        <ul className="list-disc ">
           <li>
             <a href="https://web.dev/learn/accessibility/">
               Articles about accessibility from Web.dev website
@@ -353,20 +390,16 @@ const postsData = [
           a class-name, for example <span className="code">post-content</span>{" "}
           and go to our <span className="code">index.css</span> file to do this:
         </p>
-        <pre>
-          <code>
-            <SyntaxHighlighter
-              language="css"
-              style={oldHopeTheme}
-              customStyle={codeCustomStyle}
-              showLineNumbers
-            >
-              {tailwindCode}
-            </SyntaxHighlighter>
-          </code>
-        </pre>
+        <SyntaxHighlighter
+          language="css"
+          style={oldHopeTheme}
+          customStyle={codeCustomStyle}
+          showLineNumbers
+        >
+          {tailwindCode}
+        </SyntaxHighlighter>
         <p>But now we lost lots of Tailwind benefits, like: </p>
-        <ul className="list-disc">
+        <ul className="list-disc ">
           <li>
             <strong>Class names:</strong> We had to figure out a class name,
             like traditional CSS, which is something that Tailwind tries to
@@ -406,17 +439,13 @@ const postsData = [
           allow us to achieve all of the previous benefits easily. Now all we
           have to do is to use it in our element directly, like so:
         </p>
-        <pre>
-          <code>
-            <SyntaxHighlighter
-              style={oldHopeTheme}
-              customStyle={codeCustomStyle}
-              showLineNumbers
-            >
-              {tailwindCode2}
-            </SyntaxHighlighter>
-          </code>
-        </pre>
+        <SyntaxHighlighter
+          style={oldHopeTheme}
+          customStyle={codeCustomStyle}
+          showLineNumbers
+        >
+          {tailwindCode2}
+        </SyntaxHighlighter>
         <p>Here is how it works:</p>
         <ul className="list-disc">
           <li>
@@ -446,18 +475,14 @@ const postsData = [
           We can achieve whatever we want to using this approach, just to name a
           few:
         </p>
-        <pre>
-          <code>
-            <SyntaxHighlighter
-              language="javascript"
-              style={oldHopeTheme}
-              customStyle={codeCustomStyle}
-              showLineNumbers
-            >
-              {tailwindCode3}
-            </SyntaxHighlighter>
-          </code>
-        </pre>
+        <SyntaxHighlighter
+          language="javascript"
+          style={oldHopeTheme}
+          customStyle={codeCustomStyle}
+          showLineNumbers
+        >
+          {tailwindCode3}
+        </SyntaxHighlighter>
         <h2 className="heading-2">Be careful</h2>
         <p>
           Try <strong>NOT</strong> to overuse arbitrary variants, because like
@@ -468,17 +493,13 @@ const postsData = [
           <li>
             If the same element should have many styles, maybe it is not the
             best solution. You will end up writing classes like this:
-            <pre>
-              <code>
-                <SyntaxHighlighter
-                  style={oldHopeTheme}
-                  customStyle={codeCustomStyle}
-                  showLineNumbers
-                >
-                  {tailwindCode4}
-                </SyntaxHighlighter>
-              </code>
-            </pre>
+            <SyntaxHighlighter
+              style={oldHopeTheme}
+              customStyle={codeCustomStyle}
+              showLineNumbers
+            >
+              {tailwindCode4}
+            </SyntaxHighlighter>
           </li>
           <li>
             With complicated selectors, it becomes not readable, for you to
@@ -669,7 +690,7 @@ const postsData = [
               hit enter? Here is the journey that the DNS takes to give you back
               your results:
             </p>
-            <ol className="list-decimal marker:font-bold marker:text-indigo-500">
+            <ol className="list-decimal marker:font-bold ">
               <li>
                 First, your browser or your OS (operating system) will try to
                 find the IP address for{" "}
@@ -871,7 +892,7 @@ const postsData = [
           <span className="code">www.gergesbadr.com</span> into the browser,
           here is what's happening:
         </p>
-        <ol className="list-decimal marker:font-bold marker:text-indigo-500">
+        <ol className="list-decimal marker:font-bold ">
           <li>
             The <span className="code">browser</span> will try to find the real{" "}
             <span className="code">IP address</span> for the website you write{" "}
@@ -934,6 +955,359 @@ const postsData = [
               HTTP headers
             </a>{" "}
             (article from mozilla developer)
+          </li>
+        </ul>
+      </>
+    ),
+  },
+
+  {
+    id: 4,
+    title: "Images and the web: different aspects",
+    urlTitle: "images-optimization-for-web",
+    date: new Date("2024-06-18"),
+    category: "General",
+    ogImage: "https://i.ibb.co/d0dym7W/images-post.webp",
+    introduction:
+      "Optimize Images for better performance, accessibility, user experience and more",
+    content: (
+      <>
+        <img
+          sizes="(max-width: 600px) 600px, 1200px"
+          srcSet={`${personUsingLaptopSmall} 600w, ${personUsingLaptopLarge} 1200w`}
+          src={personUsingLaptopSmall}
+          alt="person using laptop displaying a gallery in the web."
+          className="mb-4 rounded-lg"
+        />
+        <p>
+          According to the following{" "}
+          <a href="https://httparchive.org/reports/page-weight" target="_blank">
+            report
+          </a>
+          , until May 2024, the average total kilobytes of all resources
+          requested by a median page on desktop is 2.6MB, this number has about
+          1.1MB only for images! meaning that images takes almost half of the
+          page resources, that's should make us think about how to deal with it.
+        </p>
+        <p>
+          As a web developer, you are very likely going to use an image for your
+          next project. Images can add much more benefits to your site, it
+          capture attention, display complex information quickly and create
+          engaging experience.
+        </p>
+        <p>
+          Yet, it can be a nightmare if not used properly, when adding an image
+          to a website, we should not simply add it and run! there are several
+          factors that we have to pay attention for and be careful with, like
+          accessibility, performance, best practices and overall
+          user-experience. That's exactly what we are going to discus today, so,
+          let's dive into it.
+        </p>
+
+        <h2 className="heading-2" id="different-types">
+          Fundamentals of images
+        </h2>
+        <p>
+          Images are not one thing, you should use the most optimal format and
+          size for your goal, for example, it's always recommended (for many
+          reasons) to use <span className="code">SVG</span> format for logos,
+          illustrations, charts or icons. <span className="code">WebP</span>{" "}
+          format can be useful to minify the image size.{" "}
+          <span className="code">PNG</span> is better than{" "}
+          <span className="code">JPEG</span> in terms of supporting transparency
+          and using lossless compression but it usually has a large file sizes.
+        </p>
+        <p>
+          So, choosing the right format can be a little bit complicated, check
+          out the <a href="#resources">resources</a> to know more about the
+          topic.
+        </p>
+        <p>
+          Apart from choosing the right format, you should also choose "the
+          right way" to use your image, for example, should you add it as a html{" "}
+          <span className="code">&lt;img &#47;&gt;</span> tag or by using the{" "}
+          <span className="code">background-image</span> property from CSS? and
+          why? for images with text, should the text be in the image itself or
+          should you add it as a textual content and style it as you like? and
+          so on…
+        </p>
+        <h3 className="heading-3">Contextual & decorative images </h3>
+        <p>
+          When choosing the right way to write your image, ask yourself, is the
+          image only for decoration or it has a contextual value? let's have an
+          example, the following two images implemented with two different ways:
+        </p>
+        <div className="h-[200px] w-full rounded-lg bg-[url(./assets/posts/images-post/mountains-large.jpg)] bg-cover bg-center bg-no-repeat">
+          <div className="flex h-full w-full items-end justify-end bg-gradient-to-t from-black/40 p-10 text-2xl text-white">
+            Lorem Ipsum!
+          </div>
+        </div>
+        <SyntaxHighlighter
+          style={oldHopeTheme}
+          customStyle={codeCustomStyle}
+          showLineNumbers
+        >
+          {decorativeImage}
+        </SyntaxHighlighter>
+
+        <p>
+          The above example is for a decorative image, using CSS background
+          image, you can't write an <a href="#alt-text">alt-text</a> to it.
+          Search engines does not know what image you have. You can't use{" "}
+          <a href="#performance-optimization">srcset and sizes attributes</a>{" "}
+          for better performance specially in mobile devices. You also can't{" "}
+          <a href="#lazy-loading">lazy loading</a> it
+        </p>
+
+        <p>
+          Now let's achieve the same result with the same image and suppose it
+          has a contextual value that we should provide (Like a product photo, a
+          team member, a service photo, etc...):
+        </p>
+        <div className="relative">
+          <img
+            sizes="(max-width: 375px) 375px, 1440px"
+            srcSet={`${mountainsSmall} 375w, ${mountainsLarge} 1440w`}
+            src={mountainsSmall}
+            alt="Example alt text for the demonstration."
+            loading="lazy"
+            className="h-[200px] rounded-lg object-cover"
+          />
+          <div className="absolute inset-0 flex items-end justify-end bg-gradient-to-t from-black/40 p-10 text-2xl text-white">
+            Lorem Ipsum!
+          </div>
+        </div>
+        <SyntaxHighlighter
+          style={oldHopeTheme}
+          customStyle={codeCustomStyle}
+          showLineNumbers
+        >
+          {contextualImage}
+        </SyntaxHighlighter>
+
+        <p>
+          For the second example, the photo is a real DOM element, it has an
+          alt-text, a loading lazy attribute, a srcset attribute and much more
+          details, meaning that not only users with eyes that can understand it,
+          unlike the first example.
+        </p>
+
+        <h3 className="heading-3">HTML and CSS images</h3>
+
+        <p>
+          Despite all of the previous difference between HTML and CSS images,
+          browser also treat them differently in terms of downloading it.
+        </p>
+        <p>
+          Images referenced in <span className="code">&lt;img &#47;&gt;</span>{" "}
+          tag assigned a higher loading priority than{" "}
+          <span className="code"> background-image </span> defined in css. There
+          are also not downloaded until the elements get their style calculated
+          and rendered, like so:
+        </p>
+        <SyntaxHighlighter
+          style={oldHopeTheme}
+          customStyle={codeCustomStyle}
+          showLineNumbers
+        >
+          {cssImages}
+        </SyntaxHighlighter>
+
+        <h2 className="heading-2" id="lazy-loading">
+          Lazy loading
+        </h2>
+        <p>
+          Lazy loading images is the most easiest way to make images performance
+          better, after adding the attribute to the img tag like this:{" "}
+          <span className="code"> &lt;img loading="lazy" &#47;&gt;</span> the
+          browser will trigger an http request to fetch the image data and
+          display it to the user only after the image become visible into the
+          user viewport.
+        </p>
+        <p>
+          To see it in practice, open any project, add some text content that
+          fills the page at the top and add an{" "}
+          <span className="code">
+            &lt;img loading="lazy" src="my-image.png" &#47;&gt;
+          </span>{" "}
+          to the bottom of the page, meaning that you have to scroll to see it.
+        </p>
+        <p>
+          Open the devtools then open the <span className="code">Network</span>{" "}
+          panel, for better experience, in filters select{" "}
+          <span className="code">img</span> only, now you should not see the
+          request for the image that has the{" "}
+          <span className="code">loading="lazy"</span> attribute, scroll down
+          until the image is visible in your viewport and check the network
+          panel again, you will see that it has been fetched the image and you
+          can see all the request details.
+        </p>
+        <p>
+          The logic behind this behavior is that if the user is not going to see
+          that image at the bottom of my page, why should I load it and make my
+          bandwidth or my transferred resources bigger? which result in bad
+          performance and user-experience.
+        </p>
+        <Note>
+          <p>
+            <strong>Never</strong> use the loading lazy attribute with images
+            that are likely to be in-viewport when the page initially loads.
+          </p>
+          <p>
+            Check out the image in top of this post, you will not see a loading
+            lazy attribute
+          </p>
+          <p>
+            This can even lead to a worse performance. First, the browser will
+            not load the image because it has the loading lazy attribute, then,
+            it will calculate and figure out that the image is already in the
+            viewport and has to be loaded, then it will load it, which will
+            result in a big delay to the end user.
+          </p>
+        </Note>
+
+        <h2 className="heading-2" id="alt-text">
+          Alt attribute for accessibility
+        </h2>
+        <p>
+          If you are not familiar with accessibility, check out my post for{" "}
+          <a
+            href="https://www.gergesbadr.com/blog/accessibility-introduction"
+            target="_blank"
+          >
+            Accessibility introduction
+          </a>{" "}
+          but, long story short, not every user has the ability to "see" the
+          image you added, for example users using a screen-reader rely on
+          something else (you should provide to them) to understand what's in
+          the image, which is the <span className="code">alt=""</span>{" "}
+          attribute. When you are writing an alt-text, you should simply
+          describe the image.
+        </p>
+        <h3 className="heading-3">Effectively write an alt-text</h3>
+        <ul className="list-decimal ">
+          <li>
+            <strong>Always consider the context:</strong> The same image can be
+            described differently in two different situations. Again, if you
+            checked out the image at the beginning of this post, the alt-text
+            is: "person using laptop displaying a gallery in the web." because
+            it's added in a post explaining the images in the web. If that's a
+            post explaining flowers benefits for example, the alt-text would be
+            something like: "person using laptop with pink flowers in-front of
+            them."
+          </li>
+          <li>
+            <strong>Keep it short and concise:</strong> No one wants to hear too
+            much explanation for an image, be simple.
+          </li>
+          <li>
+            <strong>Add a period at the end (.):</strong> This will make the
+            screen reader pause taking for a second after the last word,
+            achieving better user-experience.
+          </li>
+          <li>
+            <strong>Never remove the alt-attribute:</strong> In some scenarios
+            (read below) you will have not to write an alt-text, even thought,
+            keep it blank but don't remove it. Removing it can lead to bad and
+            un-expected behaviors for some screen-readers like reading the image
+            file name instead of nothing. Imagine you encounter an image and the
+            screen reader says: "fdd76ad79bac5c47bbf6257e2fa1887c5.jpg"!!
+          </li>
+          <li>
+            <strong>Don't start with the word image or photo, etc..</strong> The
+            screen reader already say that's an image, so we don't have to
+            repeat it.
+          </li>
+        </ul>
+        <h3 className="heading-3">When not to use an alt-text</h3>
+        <ul className="list-decimal ">
+          <li>
+            <strong>With decorative images:</strong> Read the{" "}
+            <a href="#different-types">different-types</a> section
+          </li>
+          <li>
+            {" "}
+            <strong>With icons that has a label:</strong> in the footer of this
+            website, I have added my social media and how to contact me, each
+            link has an image with the platform icon and a label near to it.
+            This image should not have an alt-text, in this case the
+            screen-reader is going to say: "LinkedIn, LinkedIn, link." for
+            example, instead of just: "LinkedIn, link." which is better!
+          </li>
+        </ul>
+
+        <h2 className="heading-2" id="performance-optimization">
+          Performance optimization
+        </h2>
+        <p>
+          Before using an image, it's important to compress it first, by doing
+          so, you can reduce up to 50% of the image size and maybe even more
+          without losing so much of it's quality, use tolls like{" "}
+          <a href="https://squoosh.app/" target="_blank">
+            Squoosh
+          </a>{" "}
+          to do it for you.
+        </p>
+        <p>
+          It's also recommended to use the <span className="code">srcset</span>{" "}
+          along with <span className="code">sizes</span> attributes for better
+          performance, in the resources you will find more about the topic.
+        </p>
+        <p>
+          But, let's imaging we have a photo of 1200px width, displaying it in a
+          big monitor is okay, but in mobile devices, do we really need this
+          amount of information? the user will not even see more than 300px or
+          400px!
+        </p>
+        <p>
+          So, by using the srcset attribute (like we have done at the second
+          example above) we can show users of mobile devices an image with small
+          dimensions (subsequently, small size) and users of laptops or PCs a
+          bigger image.
+        </p>
+
+        <h2 className="heading-2" id="resources">
+          See also
+        </h2>
+        <ul className="list-disc">
+          <li>
+            <a
+              href="https://www.youtube.com/watch?v=PYEkeTDckQw"
+              target="_blank"
+            >
+              The Fundamentals of Images
+            </a>{" "}
+            (Youtube video)
+          </li>
+          <li>
+            <a
+              href="https://www.youtube.com/watch?v=8nlmiGwa6xM"
+              target="_blank"
+            >
+              srcset and sizes attributes
+            </a>{" "}
+            (Youtube video)
+          </li>
+          <li>
+            <a href="https://web.dev/learn/images" target="_blank">
+              Learn images
+            </a>{" "}
+            (from web.dev)
+          </li>
+          <li>
+            <a
+              href="https://web.dev/learn/accessibility/images"
+              target="_blank"
+            >
+              Images and Accessibility
+            </a>{" "}
+            (from web.dev)
+          </li>
+          <li>
+            <a href="https://cloudconvert.com/jpg-to-ico" target="_blank">
+              Cloud converter
+            </a>{" "}
+            (A tool to convert images and more files types)
           </li>
         </ul>
       </>
