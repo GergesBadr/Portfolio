@@ -1,5 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
 import { PiHandWaving } from "react-icons/pi";
+import {
+  HiOutlineChatBubbleBottomCenterText,
+  HiOutlineCloudArrowDown,
+} from "react-icons/hi2";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import PrimaryButton from "../common/PrimaryButton";
@@ -61,6 +65,7 @@ function LandingSection() {
         <div className="space-x-6">
           <PrimaryButton onClick={() => navigate("/contact")}>
             Let's talk
+            <HiOutlineChatBubbleBottomCenterText className="mb-[2px] ml-2 inline-block size-5" />
           </PrimaryButton>
 
           <motion.a
@@ -72,6 +77,7 @@ function LandingSection() {
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
             Download CV
+            <HiOutlineCloudArrowDown className="mb-[2px] ml-2 inline-block size-5" />
           </motion.a>
         </div>
       </div>

@@ -25,7 +25,7 @@ function Contact() {
       </Helmet>
 
       <AnimatedPage>
-        <section className="responsive-container grid grid-cols-1 gap-12 md:grid-cols-2">
+        <section className="responsive-container flex flex-col items-center gap-12">
           <ContactInfo />
           <ContactForm />
         </section>

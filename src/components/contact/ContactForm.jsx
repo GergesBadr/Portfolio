@@ -1,6 +1,7 @@
 import { useRef } from "react";
-import PrimaryButton from "../common/PrimaryButton";
+import { HiOutlinePaperAirplane } from "react-icons/hi2";
 import emailjs from "@emailjs/browser";
+import PrimaryButton from "../common/PrimaryButton";
 
 function ContactForm() {
   const formRef = useRef();
@@ -31,7 +32,7 @@ function ContactForm() {
     <form
       ref={formRef}
       onSubmit={sendEmail}
-      className="space-y-4 [&_label]:font-medium [&_label]:tracking-wide"
+      className="w-full space-y-4 md:max-w-2xl [&_label]:font-medium [&_label]:tracking-wide"
     >
       <div>
         <label htmlFor="user_name">Full name:</label>
@@ -78,7 +79,13 @@ function ContactForm() {
         ></textarea>
       </div>
 
-      <PrimaryButton moreStyles="w-full"> Send message </PrimaryButton>
+      <PrimaryButton
+        moreStyles="w-full flex items-center justify-center gap-2"
+        allowAnimate={false}
+      >
+        Send email
+        <HiOutlinePaperAirplane className="size-5" />
+      </PrimaryButton>
     </form>
   );
 }
