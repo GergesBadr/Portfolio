@@ -62,7 +62,7 @@ function LandingSection() {
           beautiful websites, turning ideas into visually appealing and
           functional web solutions.
         </p>
-        <div className="space-x-6">
+        <div className="flex items-center justify-center gap-4 sm:gap-6 flex-wrap">
           <PrimaryButton onClick={() => navigate("/contact")}>
             Let's talk
             <HiOutlineChatBubbleBottomCenterText className="mb-[2px] ml-2 inline-block size-5" />

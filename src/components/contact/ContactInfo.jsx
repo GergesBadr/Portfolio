@@ -4,8 +4,8 @@ function ContactInfo() {
   return (
     <div className="bg-center bg-no-repeat text-center dark:bg-[url(./assets/grid-bg.svg)]">
       <h1 className="heading-1 mb-2 leading-tight">
-        Ready to take your digital <br /> experience to the{" "}
-        <span className="unique-text">NEXT</span> level?
+        Ready to take your digital <br className="hidden sm:block" /> experience
+        to the <span className="unique-text">NEXT</span> level?
       </h1>
       <p className="mb-6 text-lg opacity-85">
         Don&apos;t be shy and message me now.
