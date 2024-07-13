@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import caraECommerce from "../assets/projects/cara-e-commerce.webp";
 import ageCalculatorApp from "../assets/projects/age-calculator-app.webp";
+import productList from "../assets/projects/product-list.webp";
 import bookmark from "../assets/projects/bookmark-landing-page.webp";
 import multiStepForm from "../assets/projects/multi-step-form.webp";
 import quizApp from "../assets/projects/quiz-app.webp";
@@ -52,6 +53,43 @@ const projectsData = [
           allowed me, with a great developer experience, to implement exciting
           and engaging animations
         </p>
+      </div>
+    ),
+  },
+
+  {
+    id: 2,
+    priority: 1,
+    image: productList,
+    title: "Product list with cart",
+    featured: true,
+    description:
+      "Responsive product list with functional/interactive cart, validation, and a confirmation order modal",
+    tags: ["TailwindCSS", "React", "Redux-toolkit"],
+    gitHub: "https://github.com/GergesBadr/product-list",
+    demo: "https://product-list-with-cart.netlify.app/",
+    details: (
+      <div className="project-details">
+        <p>
+          A frontend mentor challenge to practice updating the UI in multiple
+          places based on user actions (State management)
+        </p>
+        <h2 className="heading-2">Users should be able to:</h2>
+        <ul className="list-disc">
+          <li>Add items to the cart and remove them</li>
+          <li>Increase/decrease the number of items in the cart</li>
+          <li>
+            See an order confirmation modal when they click "Confirm Order"
+          </li>
+          <li>Reset their selections when they click "Start New Order"</li>
+          <li>
+            View the optimal layout for the interface depending on their
+            device's screen size
+          </li>
+          <li>
+            See hover and focus states for all interactive elements on the page
+          </li>
+        </ul>
       </div>
     ),
   },
@@ -169,7 +207,6 @@ const projectsData = [
     priority: 3,
     image: restCountriesApi,
     title: "Rest Countries Api",
-    featured: true,
     description:
       "Explore the world, in a user-friendly interface you will discover all needed information about countries, easily!",
     tags: ["React", "Tailwind"],

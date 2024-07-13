@@ -27,7 +27,7 @@ function ProjectItem({ project, index }) {
         src={image}
         alt={`Screenshot from ${title} website home page.`}
         loading="lazy"
-        className="w-full rounded-xl object-center"
+        className="w-full rounded-xl object-center h-[300px] object-cover"
       />
 
       <div className="flex grow flex-col justify-between">
