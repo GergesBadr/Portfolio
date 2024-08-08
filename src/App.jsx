@@ -8,6 +8,7 @@ const Header = lazy(() => import("./components/layout/Header"));
 const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
 const Projects = lazy(() => import("./pages/Projects"));
+const LatestProject = lazy(() => import("./pages/LatestProject"));
 const Blog = lazy(() => import("./pages/Blog"));
 const Post = lazy(() => import("./pages/Post"));
 const Contact = lazy(() => import("./pages/Contact"));
@@ -34,6 +35,7 @@ function App() {
                 <Route path="/home" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/projects" element={<Projects />} />
+                <Route path="/projects/latest" element={<LatestProject />} />
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/blog/:urlTitle" element={<Post />} />
                 <Route path="/contact" element={<Contact />} />

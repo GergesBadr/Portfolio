@@ -1,22 +1,20 @@
 /* eslint-disable react/no-unescaped-entities */
 import caraECommerce from "../assets/projects/cara-e-commerce.webp";
-import ageCalculatorApp from "../assets/projects/age-calculator-app.webp";
-import productList from "../assets/projects/product-list.webp";
-import bookmark from "../assets/projects/bookmark-landing-page.webp";
-import multiStepForm from "../assets/projects/multi-step-form.webp";
-import quizApp from "../assets/projects/quiz-app.webp";
-import restCountriesApi from "../assets/projects/rest-countries-api.webp";
-import spaceTourism from "../assets/projects/space-tourism.webp";
 import theWildOasis from "../assets/projects/the-wild-oasis.webp";
-import todoApp from "../assets/projects/todo-app.webp";
+import frontendMentor from "../assets/projects/frontend-mentor.webp";
+
+import ageCalculatorApp from "../assets/projects/frontend-mentor/age-calculator-app.webp";
+import productList from "../assets/projects/frontend-mentor/product-list.webp";
+import multiStepForm from "../assets/projects/frontend-mentor/multi-step-form.webp";
+import restCountriesApi from "../assets/projects/frontend-mentor/rest-countries-api.webp";
+import todoApp from "../assets/projects/frontend-mentor/todo-app.webp";
+import spaceTourism from "../assets/projects/frontend-mentor/space-tourism.webp";
 
 const projectsData = [
   {
     id: 1,
-    priority: 1,
     image: caraECommerce,
     title: "Cara E-Commerce",
-    featured: true,
     description:
       "A creative e-commerce platform designed to provide users with a seamless shopping experience",
     tags: [
@@ -59,204 +57,8 @@ const projectsData = [
 
   {
     id: 2,
-    priority: 1,
-    image: productList,
-    title: "Product list with cart",
-    featured: true,
-    description:
-      "Responsive product list with functional/interactive cart, validation, and a confirmation order modal",
-    tags: ["TailwindCSS", "React", "Redux-toolkit"],
-    gitHub: "https://github.com/GergesBadr/product-list",
-    demo: "https://product-list-with-cart.netlify.app/",
-    details: (
-      <div className="project-details">
-        <p>
-          A frontend mentor challenge to practice updating the UI in multiple
-          places based on user actions (State management)
-        </p>
-        <h2 className="heading-2">Users should be able to:</h2>
-        <ul className="list-disc">
-          <li>Add items to the cart and remove them</li>
-          <li>Increase/decrease the number of items in the cart</li>
-          <li>
-            See an order confirmation modal when they click "Confirm Order"
-          </li>
-          <li>Reset their selections when they click "Start New Order"</li>
-          <li>
-            View the optimal layout for the interface depending on their
-            device's screen size
-          </li>
-          <li>
-            See hover and focus states for all interactive elements on the page
-          </li>
-        </ul>
-      </div>
-    ),
-  },
-
-  {
-    id: 3,
-    priority: 2,
-    image: ageCalculatorApp,
-    title: "Age Calculator App",
-    description:
-      "Fast and simple way to calculate your age in years, months, and days, on the fly.",
-    tags: ["HTML", "CSS", "JS"],
-    gitHub: "https://github.com/GergesBadr/age-calculator-app",
-    demo: "https://gergesbadr.github.io/age-calculator-app/",
-    details: (
-      <div className="project-details">
-        <p>
-          A challenge from frontend mentor website, it calculates user age in
-          years, months and days, with a nice counter animation.
-        </p>
-        <p>
-          Implemented form validation for user's birthday to make sure no wrong
-          dates are added.
-        </p>
-      </div>
-    ),
-  },
-
-  {
-    id: 4,
-    priority: 3,
-    image: bookmark,
-    title: "Bookmark Landing Page",
-    description:
-      "My first TailwindCss project, simple and static one page website.",
-    tags: ["HTML", "Tailwind", "JS"],
-    gitHub: "https://github.com/GergesBadr/bookmark",
-    demo: "https://gergesbadr.github.io/bookmark/",
-    details: (
-      <div className="project-details">
-        <p>
-          It is my first TailwindCSS project, it makes my understand the
-          framework more, how to deal with it effectively and what is it's tips.
-        </p>
-        <p>
-          It's a frontend mentor challenge, with nice and simple UI, light/dark
-          mode toggle and fully responsive.
-        </p>
-      </div>
-    ),
-  },
-
-  {
-    id: 5,
-    priority: 2,
-    image: multiStepForm,
-    title: "Multi Step Form",
-    description:
-      "Simplifying the process of collecting information from the user through interactive and segmented steps",
-    tags: ["HTML", "Tailwind", "JS"],
-    gitHub: "https://github.com/GergesBadr/Multi-step-form",
-    demo: "https://gergesbadr.github.io/Multi-step-form/",
-    details: (
-      <div className="project-details">
-        <p>
-          A user-friendly and intuitive frontend mentor challenge that
-          simplifies the process of collecting information through interactive
-          and segmented steps
-        </p>
-        <h2 className="heading-2">Features:</h2>
-        <ul className="list-disc">
-          <li>Customizable Fields</li>
-          <li>Inputs validation</li>
-          <li>Responsive Design</li>
-          <li>Accessibility</li>
-          <li>Dealing with data</li>
-        </ul>
-      </div>
-    ),
-  },
-
-  {
-    id: 6,
-    priority: 3,
-    image: quizApp,
-    title: "Quiz App",
-    description:
-      "Advanced Quiz app that allows you define numbers Of questions, category, difficulty and time per question.",
-    tags: ["HTML", "Tailwind", "JS"],
-    gitHub: "https://github.com/GergesBadr/Quiz-App",
-    demo: "https://gergesbadr.github.io/Quiz-App/",
-    details: (
-      <div className="project-details">
-        <p>
-          Recently, I have realized that you can be more familiar with
-          JavaScript by creating advanced games, or some big apps (like this
-          one). but these small tutorials which are everywhere on the internet
-          won't help so much. So I decided to start this advanced journey.
-        </p>
-        <h2 className="heading-2">Features:</h2>
-        <ul className="list-disc">
-          <li>
-            User can choose number of questions, category, difficulty and time
-            per question
-          </li>
-          <li>Timer with seconds and progress animation for every question</li>
-          <li>Specially display user's score</li>
-        </ul>
-      </div>
-    ),
-  },
-
-  {
-    id: 7,
-    priority: 3,
-    image: restCountriesApi,
-    title: "Rest Countries Api",
-    description:
-      "Explore the world, in a user-friendly interface you will discover all needed information about countries, easily!",
-    tags: ["React", "Tailwind"],
-    gitHub: "https://github.com/GergesBadr/REST-Countries-API",
-    demo: "https://countries-data-api.netlify.app/",
-    details: (
-      <div className="project-details">
-        <p>
-          Explore the world! in a user-friendly interface, you will discover all
-          needed information about any country, easily!
-        </p>
-        <h2 className="heading-2">Features:</h2>
-        <ul className="list-disc">
-          <li>Up-to-date information about all the countries.</li>
-          <li>Search for a specific country</li>
-          <li>Click on a country and get more information about it</li>
-          <li>Paginated countries</li>
-        </ul>
-      </div>
-    ),
-  },
-
-  {
-    id: 8,
-    priority: 2,
-    image: spaceTourism,
-    title: "Space Tourism",
-    description:
-      "Want to discover the space? Well, sit back and relax, because we'll give you a truly experience!",
-    tags: ["HTML", "Tailwind", "JS"],
-    gitHub: "https://github.com/GergesBadr/Space-Tourism",
-    demo: "https://gergesbadr.github.io/Space-Tourism/",
-    details: (
-      <div className="project-details">
-        <p>Want to have a nice trip in space? You got the right place.</p>
-        <p>
-          A simple and presentational website for space traveling, representing
-          all needed information about different planets and more, all with
-          responsive and nice UI.
-        </p>
-      </div>
-    ),
-  },
-
-  {
-    id: 9,
-    priority: 1,
     image: theWildOasis,
     title: "The Wild Oasis",
-    featured: true,
     description:
       "A hotel management system website that helps hotel staff keep track of bookings, check guests in and out, and handle other important tasks smoothly",
     tags: [
@@ -325,29 +127,152 @@ const projectsData = [
   },
 
   {
-    id: 10,
-    priority: 2,
-    image: todoApp,
-    title: "Todo App",
+    id: 3,
+    image: frontendMentor,
+    title: "Frontend Mentor Solutions",
     description:
-      "A todo application that helps you manage your tasks efficiently",
-    tags: ["React", "Tailwind"],
-    gitHub: "https://github.com/GergesBadr/todo-app",
-    demo: "https://scintillating-travesseiro-4953be.netlify.app/",
+      "Most of my completed work on the amazing frontend mentor platform.",
+    tags: ["React", "TailwindCSS", "HTML", "CSS", "JS", "Redux-toolkit"],
     details: (
       <div className="project-details">
         <p>
-          A simple and responsive Todo application to help you manage your tasks
-          efficiently.
+          On{" "}
+          <a
+            href="https://www.frontendmentor.io/faq"
+            target="_blank"
+            className=""
+          >
+            Frontend mentor FAQ's page
+          </a>
+          , They define their platform as: "We provide front-end challenges that
+          include professional web designs. These allow you to practice building
+          websites in a realistic workflow. Taking these challenges will help
+          you improve your skills, gain experience creating websites, and build
+          up an incredible project portfolio. We also have a large community of
+          developers, so it's a great way to meet other devs! "
         </p>
-        <h2 className="heading-2">Features:</h2>
-        <ul className="list-disc">
-          <li>Add and delete tasks</li>
-          <li>Filter tasks by status (All, Active, Completed)</li>
-          <li>Clear completed tasks with one click</li>
-          <li>Saved current tasks in localStorage</li>
-          <li>Light and dark theme</li>
+
+        <p>Working on Frontend Mentor challenges allowed me to:</p>
+
+        <ul className="list-decimal">
+          <li>Improve my UI/UX design skills.</li>
+          <li>Apply modern web development practices.</li>
+          <li>Practice any new skill I learned.</li>
+          <li>Work on real-world projects.</li>
+          <li>Receive feedback from the community.</li>
         </ul>
+
+        <p>
+          I have <strong>+12</strong> completed solutions. With{" "}
+          <strong>+50</strong> people who liked my work. And a total points
+          earned of <strong>+310</strong>
+        </p>
+
+        <p>
+          Below are my highlighted challenges I've completed on Frontend Mentor.
+          Click on each to see the detailed solution and code.
+        </p>
+
+        <ul className="list-disc">
+          <li>
+            <a
+              href="https://www.frontendmentor.io/solutions/product-list-with-functional-cart-aP8P5pdMfn"
+              target="_blank"
+            >
+              Product list with cart
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.frontendmentor.io/solutions/age-calculator-app-eF-l4cB6cp"
+              target="_blank"
+            >
+              Age Calculator App
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.frontendmentor.io/solutions/a-userfriendly-multistepform-iPjEvpERi8"
+              target="_blank"
+            >
+              A user-friendly multi-step-form
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.frontendmentor.io/solutions/rest-countries-api-mDyYpSBjws"
+              target="_blank"
+            >
+              Rest Countries Api
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.frontendmentor.io/solutions/todo-app-with-reactjs-HxGA942i6z"
+              target="_blank"
+            >
+              Todo App
+            </a>
+          </li>
+        </ul>
+
+        <div className="grid grid-cols-[repeat(auto-fill,minmax(150px,250px))] justify-center gap-4 [&_img]:rounded-3xl [&_img]:shadow-md">
+          <img
+            width="250"
+            height="250"
+            loading="lazy"
+            src={productList}
+            alt="ProductList solution screenshot"
+          />
+
+          <img
+            width="250"
+            height="250"
+            loading="lazy"
+            src={ageCalculatorApp}
+            alt="Age calculator app solution screenshot"
+          />
+
+          <img
+            width="250"
+            height="250"
+            loading="lazy"
+            src={multiStepForm}
+            alt="Multi step form solution screenshot"
+          />
+
+          <img
+            width="250"
+            height="250"
+            loading="lazy"
+            src={restCountriesApi}
+            alt="Rest countries API solution screenshot"
+          />
+
+          <img
+            width="250"
+            height="250"
+            loading="lazy"
+            src={todoApp}
+            alt="Todo app solution screenshot"
+          />
+
+          <img
+            width="250"
+            height="250"
+            loading="lazy"
+            src={spaceTourism}
+            alt="Space tourism solution screenshot"
+          />
+        </div>
+
+        <a
+          href="https://www.frontendmentor.io/profile/GergesBadr/solutions"
+          target="_blank"
+          className="mx-auto block w-fit"
+        >
+          View All My Solutions on Frontend Mentor
+        </a>
       </div>
     ),
   },

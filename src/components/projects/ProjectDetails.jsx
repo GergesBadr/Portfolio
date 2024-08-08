@@ -9,7 +9,7 @@ function ProjectDetails({ project }) {
       <h1 className="heading-1 mb-4">{title}</h1>
 
       <div className="mb-8 flex flex-wrap items-center gap-2">
-        {tags.map((tag) => {
+        {tags?.map((tag) => {
           return (
             <span
               key={tag}
@@ -23,24 +23,26 @@ function ProjectDetails({ project }) {
 
       {details}
 
-      <div className="mt-8 flex flex-wrap items-center gap-6">
-        <a
-          href={gitHub}
-          target="_blank"
-          className="hover:unique-text flex items-center gap-2 font-medium duration-300"
-        >
-          <FaGithub className="size-5" />
-          <span>GitHub</span>
-        </a>
-        <a
-          href={demo}
-          target="_blank"
-          className="hover:unique-text flex items-center gap-2 font-medium duration-300"
-        >
-          <HiLink className="size-5" />
-          <span>Demo</span>
-        </a>
-      </div>
+      {gitHub && demo ? (
+        <div className="mt-8 flex flex-wrap items-center gap-6">
+          <a
+            href={gitHub}
+            target="_blank"
+            className="hover:unique-text flex items-center gap-2 font-medium duration-300"
+          >
+            <FaGithub className="size-5" />
+            <span>GitHub</span>
+          </a>
+          <a
+            href={demo}
+            target="_blank"
+            className="hover:unique-text flex items-center gap-2 font-medium duration-300"
+          >
+            <HiLink className="size-5" />
+            <span>Demo</span>
+          </a>
+        </div>
+      ) : null}
     </div>
   );
 }

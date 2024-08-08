@@ -25,7 +25,7 @@ function ProjectItem({ project, index }) {
     >
       <img
         src={image}
-        alt={`Screenshot from ${title} website home page.`}
+        alt={`Screenshot of ${title} project.`}
         loading="lazy"
         className="w-full rounded-xl object-center h-[300px] object-cover"
       />

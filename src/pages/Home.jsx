@@ -1,8 +1,9 @@
+import { Helmet } from "react-helmet-async";
 import LandingSection from "../components/home/LandingSection";
 import AnimatedPage from "./AnimatedPage";
-import FeaturedProjects from "../components/home/FeaturedProjects";
 import RecentPosts from "../components/home/RecentPosts";
-import { Helmet } from "react-helmet-async";
+import LatestProjectThumbnail from "../components/home/LatestProjectThumbnail";
+import Invitation from "../components/common/Invitation";
 
 function Home() {
   return (
@@ -27,8 +28,9 @@ function Home() {
 
       <AnimatedPage>
         <LandingSection />
-        <FeaturedProjects />
+        <LatestProjectThumbnail />
         <RecentPosts />
+        <Invitation isCentered={true} />
       </AnimatedPage>
     </>
   );

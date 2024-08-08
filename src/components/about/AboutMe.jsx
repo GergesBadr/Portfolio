@@ -15,7 +15,7 @@ function AboutMe() {
         className="mx-auto rounded-full dark:bg-indigo-100 lg:col-start-2"
       />
 
-      <div className="lg:col-start-1 lg:row-start-1 [&_p]:mb-2 [&_p]:text-lg [&_p]:leading-relaxed">
+      <div className="lg:col-start-1 lg:row-start-1 lg:max-w-2xl [&_p]:mb-2 [&_p]:text-lg [&_p]:leading-relaxed">
         <AnimatedText>
           <h1 className="heading-1 mb-4 text-center md:text-left">
             Hello, again!
@@ -30,7 +30,6 @@ function AboutMe() {
             technical capability, highly attention to details, and deeply
             understanding of user psychology.
           </p>
-          <p></p>
           <p className="font-medium">
             I am available to work. Have a project in mind or just passionate
             about web development? Whatever, I am looking forward to hearing
