@@ -3,18 +3,11 @@ import { NavLink } from "react-router-dom";
 import { HiBars3BottomRight } from "react-icons/hi2";
 import { motion } from "framer-motion";
 import ToggleTheme from "./ToggleTheme";
+import { links } from "../../data/constants";
 
 function Header() {
   const onSmallScreens = window.innerWidth < 640;
   const [isOpenHeader, setIsOpenHeader] = useState(!onSmallScreens);
-
-  const links = [
-    { name: "Home", to: "/home" },
-    { name: "About", to: "/about" },
-    { name: "Projects", to: "/projects" },
-    { name: "Blog", to: "/blog" },
-    { name: "Contact", to: "/contact" },
-  ];
 
   const listVariants = {
     hidden: {

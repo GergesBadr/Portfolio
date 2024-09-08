@@ -1,33 +1,7 @@
-import { FaGithub, FaLinkedinIn, FaWhatsapp } from "react-icons/fa6";
 import { motion } from "framer-motion";
+import { social } from "../../data/constants";
 
 function Footer() {
-  const social = [
-    {
-      id: 1,
-      name: "Github",
-      href: "https://github.com/GergesBadr",
-      icon: <FaGithub className="size-6" />,
-    },
-    {
-      id: 2,
-      name: "LinkedIn",
-      href: "https://www.linkedin.com/in/gerges-badr-9a6224245/",
-      icon: <FaLinkedinIn className="size-6" />,
-    },
-    {
-      id: 3,
-      name: "Whatsapp",
-      href: "https://wa.me/201156728649",
-      icon: <FaWhatsapp className="size-6" />,
-    },
-    {
-      id: 4,
-      name: "Frontend mentor",
-      href: "https://www.frontendmentor.io/profile/GergesBadr",
-    },
-  ];
-
   return (
     <footer className="mt-20 bg-white px-4 py-12 dark:bg-secondary-dark">
       <div className="responsive-container flex flex-col items-center gap-6 text-center">

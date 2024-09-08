@@ -10,6 +10,8 @@ function AboutMe() {
     <section className="responsive-container grid grid-cols-1 items-center gap-6 lg:grid-cols-2 ">
       <img
         src={aboutIllustration}
+        width="400"
+        height="357"
         loading="lazy"
         alt="Happy young man sitting, illustration."
         className="mx-auto rounded-full dark:bg-indigo-100 lg:col-start-2"

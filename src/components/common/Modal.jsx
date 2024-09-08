@@ -89,10 +89,14 @@ function Window({ children, id, a11yName }) {
   );
 }
 
-function Open({ children, id }) {
+function Open({ children, id, widthIsFit = false }) {
   const { openModal } = useContext(ModalContext);
 
-  return <div onClick={() => openModal(id)}>{children}</div>;
+  return (
+    <div className={widthIsFit ? "w-fit" : ""} onClick={() => openModal(id)}>
+      {children}
+    </div>
+  );
 }
 
 Modal.Window = Window;
