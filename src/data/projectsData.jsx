@@ -1,8 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
 import caraECommerce from "../assets/projects/cara-e-commerce.webp";
 import theWildOasis from "../assets/projects/the-wild-oasis.webp";
-import frontendMentor from "../assets/projects/frontend-mentor.webp";
+import msrofaty from "../assets/projects/msrofaty.webp";
 
+import frontendMentor from "../assets/projects/frontend-mentor.webp";
 import ageCalculatorApp from "../assets/projects/frontend-mentor/age-calculator-app.webp";
 import productList from "../assets/projects/frontend-mentor/product-list.webp";
 import multiStepForm from "../assets/projects/frontend-mentor/multi-step-form.webp";
@@ -128,6 +129,105 @@ const projectsData = [
 
   {
     id: 3,
+    image: msrofaty,
+    title: "Msrofaty - Expense Tracker",
+    description:
+      "Arabic expense-tracking app with detailed reports, statistics, and information to help manage budget and achieve financial goals effortlessly",
+    tags: [
+      "React",
+      "TypeScript",
+      "TailwindCSS",
+      "Framer-motion",
+      "Recharts",
+      "React-hook-form",
+      "Redux-toolkit",
+    ],
+    gitHub: "https://github.com/GergesBadr/Msrofaty",
+    demo: "https://msrofaty.netlify.app/",
+    details: (
+      <div className="project-details">
+        <p>
+          Two things are going to affect your life regardless your opinion about
+          them, health, and money. And I decided to help with the money part!
+        </p>
+        <p>
+          With Msrofaty, you can monitor/track your incomes, expenses, and
+          saving (as total or at a specific duration of time). Imagine how it
+          help into understanding, controlling, and managing your financial
+          life!
+        </p>
+        <h2 className="heading-2">Features:</h2>
+        <ul className="list-decimal !space-y-4 [&_strong]:text-primary-dark [&_strong]:dark:text-gray-300">
+          <li>
+            <strong>Overview:</strong> {""}
+            Display a clear summary of user's total income, expenses, and
+            calculated net savings from all transactions.
+          </li>
+          <li>
+            <strong>Recent transactions:</strong> {""}
+            Display the most recent 7 transactions (both income and expenses) to
+            provide users with a quick overview of their latest financial
+            activity.
+          </li>
+          <li>
+            <strong>Expense Distribution:</strong> {""}
+            Visual representation of expenses distributed by category to help
+            users understand where their money is going.
+          </li>
+          <li>
+            <strong>Transaction Management:</strong> {""}
+            <ul className="mt-2 list-disc">
+              <li>
+                <strong>Add:</strong> {""} Users can add new transactions with
+                its type "income or expense", category, amount, description, and
+                date.
+              </li>
+              <li>
+                <strong>Delete:</strong> {""}
+                Easily remove recent transactions when needed to keep financial
+                records up to date
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Category Management:</strong> {""}
+            The website offers a range of standard categories like Food,
+            Transportation, Bills, Entertainment, etc... and an additional
+            "Others" category for uncategorized expenses.
+          </li>
+          <li>
+            <strong>Time-Specific Statistics:</strong> {""}
+            Users can select a duration of time to see detailed statistics for
+            that period, including:
+            <ul className="mt-2 list-disc">
+              <li>Total amount spent per category</li>
+              <li>Most expensive day</li>
+              <li>Daily average expenses</li>
+              <li>Income, expenses, and balance for the selected period</li>
+            </ul>
+          </li>
+        </ul>
+        <p>
+          Msrofaty also has smooth animations and visually appealing UI
+          interface, ensuring an enjoyable and engaging user experience.
+        </p>
+        <h2 className="heading-2">Lessons learned:</h2>
+        <p>
+          It was my first "real" experience with TypeScript! It helped me write
+          type-safety code with static typing, enhanced code quality, improved
+          my experience as a developer, and more!
+        </p>
+        <p className="border-t-2 border-t-gray-300 pt-4 dark:border-t-gray-600">
+          Enjoy your life while not giving so much of your time, energy, and
+          mental effort trying to handle your financial management, let Msrofaty
+          do that for you now!
+        </p>
+      </div>
+    ),
+  },
+
+  {
+    id: 4,
     image: frontendMentor,
     title: "Frontend Mentor Solutions",
     description:

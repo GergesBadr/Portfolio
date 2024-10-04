@@ -64,7 +64,7 @@
   }
   .project-details ul,
   .project-details ol {
-    @apply list-inside space-y-1;
+    @apply list-inside space-y-1.5;
   }
 
   /* Code */
