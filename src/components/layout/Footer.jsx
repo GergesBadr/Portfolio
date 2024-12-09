@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { social } from "../../data/constants";
 
 function Footer() {
@@ -15,21 +14,20 @@ function Footer() {
           </p>
           <p className="sec-text">&copy; 2024-present, All Rights Reserved.</p>
         </div>
-        <div className="flex flex-wrap justify-center gap-8">
+
+        <div className="flex flex-wrap justify-center gap-6">
           {social.map((link) => {
             return (
-              <motion.a
+              <a
                 key={link.id}
                 href={link.href}
                 target="_blank"
-                className="flex items-center justify-center gap-2"
-                // Animation
-                whileHover={{ scale: 1.1, rotate: 3 }}
-                whileFocus={{ scale: 1.1, rotate: 3 }}
+                aria-label={link.name}
+                title={link.name}
+                className="flex size-12 items-center justify-center gap-2 rounded-full border-2 border-gray-400 duration-200 hover:-translate-y-2 dark:border-gray-700"
               >
                 {link.icon}
-                <span>{link.name}</span>
-              </motion.a>
+              </a>
             );
           })}
         </div>

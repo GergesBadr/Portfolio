@@ -4,6 +4,7 @@ import FeaturesList from "../components/about/FeaturesList";
 import SkillsList from "../components/about/SkillsList";
 import AnimatedPage from "./AnimatedPage";
 import FunFactsList from "../components/about/FunFactsList";
+import ReposList from "../components/about/ReposList";
 
 function About() {
   return (
@@ -30,6 +31,7 @@ function About() {
         <AboutMe />
         <FunFactsList />
         <FeaturesList />
+        <ReposList />
         <SkillsList />
       </AnimatedPage>
     </>

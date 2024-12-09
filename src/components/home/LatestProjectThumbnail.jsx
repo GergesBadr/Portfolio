@@ -20,7 +20,7 @@ function LatestProjectThumbnail() {
 
       <div className="max-w-2xl space-y-3">
         <h3 className="heading-3">Un-social media</h3>
-        <p className="sec-text text-lg leading-relaxed">
+        <p className="text-lg leading-relaxed opacity-75">
           We all use social media every day, but, have you ever wondered how is
           social media affecting us? Unsocial-media is a website to discuss the
           problems of social media, how it works behind the scenes, how each
@@ -31,8 +31,8 @@ function LatestProjectThumbnail() {
           onClick={() => navigate("/projects/latest")}
           className="group flex items-center gap-1 font-semibold"
         >
-          View project{" "}
-          <HiChevronRight className="size-5 duration-200 group-hover:translate-x-1.5" />{" "}
+          View project
+          <HiChevronRight className="size-5 duration-200 group-hover:translate-x-1.5" />
         </button>
       </div>
 

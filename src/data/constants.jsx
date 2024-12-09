@@ -1,5 +1,6 @@
 // Social icons
-import { FaGithub, FaLinkedinIn, FaWhatsapp } from "react-icons/fa6";
+import { FaWhatsapp, FaLinkedinIn, FaGithub } from "react-icons/fa6";
+import { SiUpwork } from "react-icons/si";
 
 // Facts icons
 import { HiOutlineBookOpen } from "react-icons/hi2";
@@ -40,26 +41,27 @@ export const links = [
 export const social = [
   {
     id: 1,
-    name: "Github",
-    href: "https://github.com/GergesBadr",
-    icon: <FaGithub className="size-6" />,
+    href: "https://wa.me/201156728649",
+    icon: <FaWhatsapp className="size-6" />,
+    name: "Whatsapp",
   },
   {
     id: 2,
-    name: "LinkedIn",
-    href: "https://www.linkedin.com/in/gerges-badr-9a6224245/",
+    href: "https://www.linkedin.com/in/gerges-badr",
     icon: <FaLinkedinIn className="size-6" />,
+    name: "Linkedin",
   },
   {
     id: 3,
-    name: "Whatsapp",
-    href: "https://wa.me/201156728649",
-    icon: <FaWhatsapp className="size-6" />,
+    href: "https://github.com/GergesBadr",
+    icon: <FaGithub className="size-6" />,
+    name: "GitHub",
   },
   {
     id: 4,
-    name: "Frontend mentor",
-    href: "https://www.frontendmentor.io/profile/GergesBadr",
+    href: "https://www.upwork.com/freelancers/~010d7371f28d8ce46f?mp_source=share",
+    icon: <SiUpwork className="size-6" />,
+    name: "Upwork",
   },
 ];
 
