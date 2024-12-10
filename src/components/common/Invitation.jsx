@@ -5,7 +5,7 @@ function Invitation({ isCentered }) {
       className={`space-y-4 ${isCentered ? "mx-auto max-w-2xl px-4 text-center" : ""}`}
     >
       <h2 className="heading-2"> Let's Build Something Together! </h2>
-      <p className="sec-text text-lg leading-relaxed">
+      <p className="opacity-75 text-lg leading-relaxed">
         Feel free to react out if you're looking for a developer, have a
         question, or just want to start a conversation.
       </p>

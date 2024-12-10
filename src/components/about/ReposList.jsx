@@ -61,7 +61,7 @@ function ReposList() {
       {hasError && <ReposError err={hasError} />}
 
       {!isLoading && !hasError ? (
-        <ul className="responsive-container grid grid-cols-[repeat(auto-fill,minmax(375px,1fr))] gap-6">
+        <ul className="responsive-container grid grid-cols-1 sm:grid-cols-[repeat(auto-fill,minmax(350px,1fr))] gap-6">
           {repos.map((repo) => {
             return <RepoItem key={repo.id} repo={repo} />;
           })}
